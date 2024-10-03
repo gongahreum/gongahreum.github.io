@@ -142,8 +142,8 @@ startLottie.addEventListener("DOMLoaded", function () {
     url = window.location.href;
   xmlhttp.open(method, url, true);
   xmlhttp.onprogress = function (event) {
-    loadedPercent = event.loaded / event.total;
-    console.log("111", event.loaded, event.total);
+    // loadedPercent = event.loaded / event.total;
+    loadedPercent = event.loaded / 124280;
     loadFrame = 90 * loadedPercent;
     window.cancelAnimationFrame(dataAnimation);
     dataAnimation();
