@@ -100,7 +100,6 @@ startLottie.addEventListener("DOMLoaded", function () {
   function dataAnimation() {
     startLottie.goToAndStop(ff, true);
     // if (ff <= loadFrame) {
-    console.log(ff);
     if (ff <= 90) {
       if (window.innerWidth > 767) {
         ff += 0.3;
@@ -144,6 +143,7 @@ startLottie.addEventListener("DOMLoaded", function () {
   xmlhttp.open(method, url, true);
   xmlhttp.onprogress = function (event) {
     loadedPercent = event.loaded / event.total;
+    console.log("111", event.loaded, event.total);
     loadFrame = 90 * loadedPercent;
     window.cancelAnimationFrame(dataAnimation);
     dataAnimation();
