@@ -92,6 +92,7 @@ document.querySelector(".does-page-btn").style.right =
   getScrollbarWidth() + "px";
 var startLottie = window.innerWidth > 1000 ? storyLottieAni1 : storyLottieAni1M;
 startLottie.addEventListener("DOMLoaded", function () {
+  console.log("dom");
   var ff = 0;
   var loadAnimationStart = true;
   var loadFrame = startLottie.totalFrames;
