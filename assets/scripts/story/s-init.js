@@ -109,7 +109,6 @@ startLottie.addEventListener("DOMLoaded", function () {
       requestAnimationFrame(dataAnimation);
     } else {
       window.cancelAnimationFrame(dataAnimation);
-      console.log("123", loadedPercent, loadAnimationStart);
       if (loadedPercent >= 1) {
         loadFrame = startLottie.totalFrames;
         window.cancelAnimationFrame(dataAnimation);
@@ -121,7 +120,6 @@ startLottie.addEventListener("DOMLoaded", function () {
     }
   }
   function loadAnimation() {
-    console.log("a");
     startLottie.goToAndStop(ff, true);
     // if (ff <= loadFrame) {
     if (ff <= 90) {
@@ -133,7 +131,6 @@ startLottie.addEventListener("DOMLoaded", function () {
       requestAnimationFrame(loadAnimation);
     } else {
       window.cancelAnimationFrame(loadAnimation);
-      console.log("b");
       window.STORY.load();
     }
   }
