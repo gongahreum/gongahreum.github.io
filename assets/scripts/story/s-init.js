@@ -110,6 +110,7 @@ startLottie.addEventListener("DOMLoaded", function () {
       requestAnimationFrame(dataAnimation);
     } else {
       window.cancelAnimationFrame(dataAnimation);
+      console.log("123", loadedPercent, loadAnimationStart);
       if (loadedPercent == 1) {
         loadFrame = startLottie.totalFrames;
         window.cancelAnimationFrame(dataAnimation);
